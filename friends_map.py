@@ -25,4 +25,3 @@ def display_locations(nickname):
             new_dict[name] = (loc, location.latitude, location.longitude)
             Marker(location=(location.latitude, location.longitude), popup=name+'\n'+loc, icon=Icon(color='pink')).add_to(my_map)
     my_map.save('friend_locations.html')
-display_locations('anhelina_k')
