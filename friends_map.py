@@ -24,4 +24,4 @@ def display_locations(nickname):
             location = geolocator.geocode(loc)
             new_dict[name] = (loc, location.latitude, location.longitude)
             Marker(location=(location.latitude, location.longitude), popup=name+'\n'+loc, icon=Icon(color='pink')).add_to(my_map)
-    my_map.save('friend_locations.html')
+    my_map.save('templates/friends_locations.html')
