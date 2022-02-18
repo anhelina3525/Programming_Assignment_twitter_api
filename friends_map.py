@@ -2,10 +2,6 @@
 This module displays locations of people
 in your twitter 'following' section.
 """
-from geopy.geocoders import Nominatim, ArcGIS
-from folium import FeatureGroup, Marker, LayerControl, Map, Icon
-import json
-from twitter2 import get_dict_twitter
 def display_locations(nickname):
     """
     This function shows the locations
@@ -25,3 +21,4 @@ def display_locations(nickname):
             new_dict[name] = (loc, location.latitude, location.longitude)
             Marker(location=(location.latitude, location.longitude), popup=name+'\n'+loc, icon=Icon(color='pink')).add_to(my_map)
     my_map.save('templates/friends_locations.html')
+    
